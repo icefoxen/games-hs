@@ -1,0 +1,243 @@
+Hypersonic.  A fun little twitch-game, is all.  Inspired by a time when I went to the bathroom at 3 in the morning and thought about what made Sonic the Hedgehog a good game.
+
+What does make it a good game?
+Lots of fast, interesting action.
+You seldom stop and have to toy with things.
+Multiple routes through each level; it's easy to not know where the hell you are but as long as you keep going forward it generally works out.
+Secrets and interesting bits, but not too elaborate.
+Varied, interactive bosses.  Not just a big spaceship with a shot-pattern.
+Interesting but relatively straight-forward hazards.
+Lots of FUN flippers, bouncers, loops, etc.
+Awesome run-streaks.
+
+
+
+So.  It's sorta like a side-scrolling space-shooter...  wider, though.  Either a spaceship or tank-ish vehicle...  Hmm, let's say the latter, and play Blaster Master a bit for inspiration.  ^_^
+The fun comes from shooting though somewhere at high-speed plowing through everything in your path, NOT covering the screen with weapons-fire.
+
+You have a ram-booster to kill things...  Evil robots!  Mad ecologists!  Muahahaha!  Defend the grand cities and shiny factories from the depredations of the evil greenies and their attempts to spread noxious forests over the world!  Kill cute fluffy little animals!  ^_^
+*grins*  Maybe you're just a scout for a completely robotic society stomping out the last vestiges of the human resistance...
+
+...what?
+
+Anyhoo.  "You" are a little scout-tank or maybe Aestevalis-ish robot.  High speed, up to double-layered shields (if you collect enough energy shards), ram-weapon and boosters.  Hedgehog-spikes?  Heh...
+You kill things by ramming them, jumping and ramming, or landing on them with your heavy armored (and spiked) treads.  If you get hit, your shields discharge and you lose a bunch of energy shards, which you may be able to re-collect before they fade.  If you get over 100 energy shards and have the appropriate expansion, you can get double-walled shields.  There are things like uber-boosters, uber-jumpers, invulnerability, etc.
+
+...I'm going to need an artist for this...  Ah well.  I'll work it out when I need music too.
+
+The level bosses are nice forest-y animals... evil bunnies with big sharp pointy teeth, lions and tigers and drop-bears, sparkly unicorns, squirrels and foxies and wolves.  ^_^
+
+
+
+
+MAYBE LATER it gets more elaborate; I'm inclined to think you find bits and
+pieces of things that can be fit together in different ways for different
+advantages.  But they're all tools, and none of them are strictly necessary
+for the game or give a huge advantage over the others.
+
+
+
+
+Okay, we need some actual design here.
+You're a little tank-type thing, a la Blaster Master (more or less).  You are
+fast, you are jumpy, you have a ramming prow and a booster-engine.
+If you touch an enemy with your front at normal max speed, they bounce off
+(over?) you.  If you touch an enemy at boost speed (or going on a long
+downhill etc), they take damage (generally dying).  If you jump and bounce on
+an enemy, you usually just bounce right off (nobody takes damage).  If an
+enemy touches your top or sides, you take damage.
+(Maybe touching an enemy at normal speed will hurt you?  Maybe jumping on an
+enemy will hurt you or them?)
+Your booster-engine probably has a limited number of uses per time period.
+Maybe 3 uses, and it takes 10 seconds to recharge?  It'll make boss fights
+more interesting.
+
+One hit of damage will kill you if you have no shields.  You power up your
+shields by collecting energy crystals.  If you get hit while you have 1 or
+more energy crystals, your shields will die and all energy crystals vanish (or
+fan out like Sonic?  Too obvious rip-off, but...).  If you get hit while you
+have 100 or more energy crystals, you will get bumped down to 100 the same
+way.  If you get 200 crystals, you gain a 1-up and are reset to 1.
+(Maybe only single-walled shields?)
+
+In each level you can go backwards or forwards; you start at the left-most
+side and finish when you cross the right-most side.  
+
+Each level has a variety of interesting gimmicks placed where they'll be most
+useful/fun.  At the moment there's only Bouncers (which bounce you straight
+up), Springboards (which bounce you at an angle when you drive over them), and
+secret walls (which can be broken with a boost-ram).  There should be multiple
+paths through each level, with varying levels of difficulty/obviousness.
+
+Each level should have it's own motif and scenery.  Woodland, Ocean(?),
+Jungle, Desert, Cave, Anthill/Beehive, Spiderweb, etc.  Think multiple
+tilesets...
+
+There are a variety of enemies, but at the moment we only implement Bunnies
+With Nasty Big Pointy Teeth, Acorn-Grenade Squirrels (we've GOT to have a
+short animation of one of them eating an acorn grenade somewhere!), and
+Dive-Bomb Sparrows (wearing leather bomber-hats).  Each has it's own behavior
+and perhaps specific strengths and weaknesses (ie sparrows may be stunned for
+a short time right after hitting the ground).
+
+There should also be various hazards.  Pits are the most obvious.  Water
+doesn't hurt you (maybe).  Spikes slow you down and make it harder to jump.
+Tar-traps slow you down a lot.  Maybe Cthulu-esque tentacle-pits, just for
+fun?
+
+Every few levels or so there should be a boss, which is bigger, harder,
+nastier, and has a variety of attacks.  They should follow the woodland/
+nature-y theme of the game.  Lions, tigers, and bears, oh my.  Feel free to
+also have Sheep (possibly explosive), Queen Ants, Dolphins, Spiders, that
+sorta thing.
+
+That's it, I think.  A style note: Feel free to have all your friends (robots)
+look evil and nasty, and all your enemies (animals) look cute and fuzzy and
+nice.  There is NO gore or roadkill or anything like that though!!  An enemy
+dies, it dissapears in a poof of smoke.
+
+
+
+YOU
+You are a small, fast scout-tank working for the Evil Robot Hegemony,
+whose mission it is to stomp out the resistance forces of the Small
+Fuzzy Woodland Creatures.
+You have two main weapons: jump-jets, which let you bounce on top of
+enemy creatures and squish them utterly, and a booster-jet, which
+gives you a momentary speed-boost that lets you run over evil things
+with abandon.
+You also have a shield generator that is capable of protecting you
+from damage, if you supply it with sufficient energy crystals.  You
+may find other power-ups as you go along.
+
+THEM
+They are the foul, vile fuzzy woodland creatures whose only goal in
+life is to viciously annihilate the Robot Hegemony's glittering cities
+and pristine factories.  You must stop them!
+The enemies should vary to fit in with the level, and can include
+strange and unobvious things that may help you as much as hinder you.
+Or something.
+But right now, the first enemies we want to make are:
+Evil Bunnies: With nasty big pointy teeth!  Basic ground-pounders,
+might be able to make impressive jumps.
+Dive-Bomb Sparrows: They lurk in the trees and strike when you least
+expect it!  Or something.  They might end up stunned if they hit the
+ground.  They wear leather fighter-helmets.
+Grenade Squirrels: They toss lethal acorns at you, of course.
+Somewhere, there might be a squirrel that yells "Destroy all
+evidence!" and eats an acorn, to it's demise.
+
+FIGHTING
+Touching enemies is bad for you, and will kill you instantly unless
+you have a shield.  If you do have a shield, it'll discharge, possibly
+killing the enemy in the process.  There are a few exceptions to this
+rule:
+If you jump and land on an enemy with your armored treads, you squish
+'em.  Tanks are heavy, after all.
+If you boost or otherwise go over your normal max speed, you can ram
+enemies and run them over.  Your booster might generate an additional
+shield in front of you when this is happening.
+
+LEVELS
+There will be... well, somewhere between 9 and an infinate number of
+levels.  They should each follow a common theme, and the connections
+between them should be reasonable; no going from desert straight to
+arctic.
+At the end of every level, or maybe every X levels, there should be a
+big bad boss.  Everyone likes big bad bosses.
+In terms of level design, there should be many things to support a
+run-and-jump style of gameplay.  Charging through on sheer speed and
+nerves should be possible.  However, there could also be several
+seperate paths through the level, some secret, some more rewarding
+than others.  The levels should be big enough to explore.
+
+The first level will be deep in the heart of a city under attack from
+the Forces of Nature.
+The second level will be in the plains and forest surrounding the
+city, sorta in the transition zone.
+The third level will be deep in the heart of the forest, where it's
+dark and gloomy and wild things lurk.
+The fourth level will be an ant-burrow or termite hive, labrynthine
+with weird creepy-crawlies.
+The fifth level will be a deep cave, full of bats and pale lobsters
+and such.
+The sixth level will lead out into an underwater cave, maybe emptying
+into the deep sea-bottom.  Hydrothermal vents!
+The seventh level will be coastal sea, with beach and sandbars and
+coral and sharks.
+The eighth level will be desert with snakes and scorpions
+The ninth level will be plains with lions and hawks.
+
+I actually don't know what the big evil boss bad-guy will be.  Well,
+it'll be a big heroic boss good-guy, obviously, but of what nature?  A
+lion seems cliche.  Whale?
+
+Ah-ha.  A DRAGON.
+
+We need a lava-level and an arctic-level!
+
+
+GIMMICKS
+Gimmicks are pretty much any level features besides walls.
+Bouncers, on walls and floor.  Pretty standard, make you jump high and
+go fast.
+Springboards, that bounce you up at an angle when you run over 'em.
+Breakable walls that you can boost through.
+Breakable floors that you fall through if you stay on 'em too long.
+Platforms that swing back and forth, or even in circles.
+Tar that slows you down.
+Quicksand that you sink into.
+Ice that makes you skid.
+Spikes that may hurt you, or may only hurt bad guys.
+Treasure chests that have nice loot in 'em.
+
+
+
+
+POWER-UPS
+You always have your booster, so it's not really a power-up, but it
+does have some special behavior.  The boost is a high acceleration
+over maybe half a second, has perhaps half a second cool-down time.
+You have a "cache" of 3 boosts, and they recharge at maybe one every
+five seconds.  This makes their tactical use important.  Of course,
+all the above is subject to change for balancing.
+
+The most basic power-up is the shield.  Energy crystals are scattered
+throughout the various levels; if you collect some number of them...
+100 seems like too much but 10 is too few, maybe 25?  Anyway, you get
+a number of crystals, and you get a shield.  It is basically an extra
+wound; it'll protect you from one hit.  In addition, it'll destroy any
+enemy that hits it in the process.
+
+You can also pick up metal, which is similarly scattered about.  When
+you get 100 chunks of metal, you get an extra life.  Pretty simple.
+
+Other ideas:
+Grapple-wheels that let you walk on certain walls and ceilings.
+Improved booster.
+Single-use bomb?
+Defensive crouch-mode which makes you shorter and places a shield in
+front of you.
+Improved shield generator, requires fewer crystals.
+Improved jump-jets.
+Super-shield, a la Mario star or Sonic sparkles.
+Grappling hook that lets you swing.
+Spiked treads that penetrate armor better.
+Underwater addon?
+Lavawalker addon?
+
+Some of these ideas may be implemented as temporary power-ups that
+fade after a time.
+
+
+STYLE
+The art should overall be somewhat cartoony and creative, and I
+wouldn't mind some old-school pixel-pushing stuff as opposed to modern
+smooth vector-art.  There's no blood or gore or things, enemies just
+dissapear in a poof of smoke.
+
+IDEAS
+Co-op play!  Split-screen or same-screen.
+Secret levels!
+Time-based physics!
+

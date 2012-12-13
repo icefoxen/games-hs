@@ -1,0 +1,76 @@
+
+########################################################################
+# Permission is hereby granted, free of charge, to any person
+# obtaining a copy of this file, to deal in the File without
+# restriction, including without limitation the rights to use,
+# copy, modify, merge, publish, distribute, sublicense, and/or
+# sell copies of the File, and to permit persons to whom the
+# File is furnished to do so, subject to the following condition:
+#
+# THE FILE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+# OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+# IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+# DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+# OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE FILE OR
+# THE USE OR OTHER DEALINGS IN THE FILE.
+########################################################################
+# OCaml configuration.
+
+
+################################################
+# Configuration.  You may want to modify any of these configuration
+# variables.
+#
+OCAMLC = ocamlcp
+OCAMLOPT = ocamlopt.opt
+OCAMLDEP = ocamldep
+OCAMLLINK = ocamlc
+OCAMLOPTLINK = ocamlopt.opt
+
+#
+# Include path
+#
+#OCAMLINCLUDES +=
+
+#
+# Compile native or byte code?
+#
+BYTE_ENABLED = true
+NATIVE_ENABLED = false
+
+#
+# Various options
+#
+OCAMLFLAGS    +=
+OCAMLCFLAGS   += -I +sdl
+OCAMLOPTFLAGS +=
+OCAML_LINK_FLAGS += -I +sdl
+OCAML_BYTE_LINK_FLAGS +=
+OCAML_NATIVE_LINK_FLAGS +=
+
+################################################
+# Build an OCaml library
+#
+
+# FILES =
+# LIB =
+# OCamlLibrary($(LIB), $(FILES))
+#
+# .DEFAULT: $(LIB).cma
+
+################################################
+# Build an OCaml program
+#
+
+FILES = profiling util config resources drawing text audio input vector area sprite gameobj particles player tile level worldhandler main
+PROGRAM = hs
+OCAML_LIBS +=
+OCAML_CLIBS +=
+OCAML_OTHER_LIBS += str unix nums bigarray sdl sdlloader sdlttf sdlmixer 
+OCAML_LIB_FLAGS +=
+OCamlProgram($(PROGRAM), $(FILES))
+.DEFAULT: $(PROGRAM).run
+
+clean:
+	rm -rf *.cmo *.cmi *~ *.o hs.run

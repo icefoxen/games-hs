@@ -1,0 +1,12 @@
+#!/bin/sh
+echo "Cleaning..."
+cd src
+./clean
+echo "Compiling..."
+./compile
+echo "Linking..."
+./link
+cp hs ..
+rm hs
+cd ..
+echo "Done!"
